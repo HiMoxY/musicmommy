@@ -19,25 +19,25 @@ client.on('message', msg => {
     msg.reply('pong');
   }
 });
-if (message.content === 'mommy help') {
+if (message.content === '$help') {
               var embed  = new Discord.RichEmbed()
                 .addField("**LINKS**" ,":no_entry_sign: Added blocking links :no_entry_sign: ")
                 .addField("broadcast (bc)" ,"**user:** ``$broadcast <message> , $bc <message>``")
-                .addField("**BAN**" ,"**user:** ``mommy ban <user>``")
-                .addField("**KICK**" ,"**user:** ``mommy kick <user> ``")
-                .addField("**ِAVATAR**" ,"**user:** ``mommy avatar``")
-                .addField("**INFO**", "**user :** ``mommy info``")
-                .addField("**SAY**" ,"**user:** ``mommy say <message>``")
-                .addField("**ID**" ,"**ال��ستخدام:** ``mommy id``")
-                .addField("**SERVER**" ,"**user:** ``mommy server``")
-                .addField("**INVITE**" ,"**user:** ``mommy invite <invite bots>``")
-                .addField("**SUPPORT**" ,"**user:** ``mommy suppport <server support>``")
-                .addField("**QA**" ,"**user:** ``mommy qa <السؤال>``  ")
-                .addField("**CLEAR**" ,"**user:** ``mommy clear <العدد>``")
-                .addField("**PING**", "**user:** ``mommy ping``")
-                .addField("**SERVERNAME**", "**user:** ``mommy servername``")
-                .addField("**CUT_TWEET**", "**user** ``mommy ct``")
-                .addField("**TWEET**", "**user** ``mommy tweet <message>``")
+                .addField("**BAN**" ,"**user:** ``$ban <user>``")
+                .addField("**KICK**" ,"**user:** ``$kick <user> ``")
+                .addField("**ِAVATAR**" ,"**user:** ``$avatar``")
+                .addField("**INFO**", "**user :** ``$info``")
+                .addField("**SAY**" ,"**user:** ``$say <message>``")
+                .addField("**ID**" ,"**ال��ستخدام:** ``$id``")
+                .addField("**SERVER**" ,"**user:** ``$server``")
+                .addField("**INVITE**" ,"**user:** ``$invite <invite bots>``")
+                .addField("**SUPPORT**" ,"**user:** ``$suppport <server support>``")
+                .addField("**QA**" ,"**user:** ``$qa <السؤال>``  ")
+                .addField("**CLEAR**" ,"**user:** ``$clear <العدد>``")
+                .addField("**PING**", "**user:** ``$ping``")
+                .addField("**SERVERNAME**", "**user:** ``$servername``")
+                .addField("**CUT_TWEET**", "**user** ``$ct``")
+                .addField("**TWEET**", "**user** ``$tweet <message>``")
                 .addField("**NO INVITE LINKE**","Added the block blocking feature")
                 .addField("**LOGIN**" , " no thing ")
                 .setColor('RANDOM')
@@ -63,7 +63,7 @@ client.on('message', message => {
         message.delete()
     return message.reply(`** No Invite Links :angry: ! **`)
     }
-	if (message.content === 'mommy play') {
+	if (message.content === '$play') {
     if (message.member.voiceChannel) {       
         message.member.voiceChannel.join()
         .then(connection => {
@@ -77,17 +77,17 @@ client.on('message', message => {
 }
 });
 client.on('message', msg => {
-  if (msg.content === 'mommy invite') {
-    msg.reply('https://discordapp.com/oauth2/authorize/?permissions=2146958591&scope=bot&client_id=460911160045338624');
+  if (msg.content === '$invite') {
+    msg.reply('https://discordapp.com/oauth2/authorize/?permissions=2146958591&scope=bot&client_id=445626711313219594');
   }
 });
 client.on('message', msg => {
-  if (msg.content === 'mommy help') {
+  if (msg.content === '$help') {
     msg.reply(':envelope: | Message sent in private');
   }
 });
 client.on("message", message => {
-    var prefix = "mommy";
+    var prefix = "$";
  
             var args = message.content.substring(prefix.length).split(" ");
             if (message.content.startsWith(prefix + "clear")) {
@@ -101,7 +101,7 @@ client.on("message", message => {
         color: 0x06DF00,
         description: "Messages successfully cleared",
         footer: {
-          text: "Mommy 📻."
+          text: "HiMo🎤."
         }
       }}).then(msg => {msg.delete(3000)});
                           }
@@ -110,17 +110,17 @@ client.on("message", message => {
 });
 // Your Avatar URL!
 client.on('message', message => {
-    if (message.content === "mommy Avatar") {
+    if (message.content === "$Avatar") {
     message.reply(message.author.avatarURL); 
     }
 });
 client.on('message', msg => {
-  if (msg.content === 'mommy suppport') {
-    msg.reply('server support join ,https://discord.gg/WbWkQZa');
+  if (msg.content === '$suppport') {
+    msg.reply('server support join ,https://discord.gg/G7D7VnD');
   }
 });
 client.on("message", message => {
-      if (message.content === "mommy ping") {
+      if (message.content === "$ping") {
       const embed = new Discord.RichEmbed()
   .setColor("RANDOM")
   .addField('**Ping:**' , `${Date.now() - message.createdTimestamp}` + ' ms')
@@ -128,12 +128,12 @@ client.on("message", message => {
     }
 });
     client.on('message', message => {
-     if (message.content === "mommy id") {
+     if (message.content === "$id") {
      let embed = new Discord.RichEmbed()
   .setThumbnail(message.author.avatarURL)  
   .setAuthor(message.author.username)
 .setDescription("Account information")
-               .setFooter(`Mommy📻.`, '')
+               .setFooter(`HiMo🎤.`, '')
   .setColor("#9B59B6")
   .addField("account name", `${message.author.username}`)
   .addField('account code', message.author.discriminator)
@@ -145,7 +145,7 @@ client.on("message", message => {
   message.channel.sendEmbed(embed);
     }
 });
-var prefix = "mommy";
+var prefix = "$";
 client.on('message', message => {
   if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;
@@ -173,7 +173,7 @@ client.on("guildMemberRemove", member => {
   }
 );
 client.on("message", (message) => {
-    if (message.content.startsWith("$ban ")) {
+    if (message.content.startsWith("*ban ")) {
       if(!message.member.hasPermission('BAN_MEMBERS')) return message.reply('⚠ you dont have permission');
         var member= message.mentions.members.first();
         member.ban().then((member) => {
